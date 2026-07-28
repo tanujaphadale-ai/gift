@@ -1,0 +1,460 @@
+body{
+
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:40px 0;
+
+    background:linear-gradient(
+        135deg,
+        #ffe6a7,
+        #ffd6e0
+    );
+
+    font-family:Arial;
+
+}
+
+
+/* First Welcome Box */
+
+.container{
+
+    text-align:center;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 20px gray;
+
+}
+
+
+h1{
+
+    color:#d35400;
+
+}
+
+
+button{
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#e67e22;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Letter Section */
+
+.letter{
+
+    display:none;
+
+    background:#fff4d6;
+
+    padding:40px;
+
+    width:380px;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+    font-family:'Segoe Print',cursive;
+
+    animation:openLetter 1s ease;
+
+}
+
+
+
+/* Letter Opening Animation */
+
+@keyframes openLetter{
+
+
+    from{
+
+        transform:scale(0.5);
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+.letter h1{
+
+    color:#b03a2e;
+
+    text-align:center;
+
+    font-family:cursive;
+
+}
+
+
+
+.letter p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#222;
+
+    white-space:pre-line;
+
+}
+
+
+/* Flower Decoration */
+
+.flower{
+
+    text-align:center;
+
+    font-size:25px;
+
+}
+
+
+
+/* Memories Section */
+
+
+.gallery{
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+
+
+.gallery h2{
+
+    color:#b03a2e;
+
+}
+
+
+
+.photos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:20px;
+
+}
+
+
+
+.photos img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px gray;
+
+    transition:0.4s;
+
+    animation:photoShow 1s ease;
+
+}
+
+
+
+.photos img:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* Photo Appear Animation */
+
+
+@keyframes photoShow{
+
+
+    from{
+
+        transform:scale(0.5);
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* Big Photo Popup */
+
+
+.popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.8);
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.popup img{
+
+    max-width:85%;
+
+    max-height:85%;
+
+    border-radius:20px;
+
+    animation:zoom 0.5s;
+
+}
+
+
+
+/* Big Image Animation */
+
+
+@keyframes zoom{
+
+
+    from{
+
+        transform:scale(0.5);
+
+    }
+
+
+    to{
+
+        transform:scale(1);
+
+    }
+
+}.flowers span{
+
+    position:fixed;
+
+    top:-50px;
+
+    font-size:30px;
+
+    animation:fall 8s linear infinite;
+
+}
+
+
+
+.flowers span:nth-child(1){
+
+    left:10%;
+
+    animation-delay:0s;
+
+}
+
+
+.flowers span:nth-child(2){
+
+    left:25%;
+
+    animation-delay:2s;
+
+}
+
+
+.flowers span:nth-child(3){
+
+    left:40%;
+
+    animation-delay:4s;
+
+}
+
+
+.flowers span:nth-child(4){
+
+    left:60%;
+
+    animation-delay:1s;
+
+}
+
+
+.flowers span:nth-child(5){
+
+    left:75%;
+
+    animation-delay:3s;
+
+}
+
+
+.flowers span:nth-child(6){
+
+    left:90%;
+
+    animation-delay:5s;
+
+}
+
+
+
+@keyframes fall{
+
+    from{
+
+        transform:translateY(-50px) rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:translateY(100vh) rotate(360deg);
+
+    }
+
+}.final{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    animation:finalShow 2s ease;
+
+}
+
+
+
+.final h1{
+
+    color:#d35400;
+
+    font-family:cursive;
+
+}
+
+
+
+.final p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#4a235a;
+
+    white-space:pre-line;
+
+}
+
+
+
+@keyframes finalShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
